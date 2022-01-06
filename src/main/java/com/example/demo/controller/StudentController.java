@@ -1,6 +1,8 @@
-package com.example.demo.student;
+package com.example.demo.controller;
 
 
+import com.example.demo.service.IStudentService;
+import com.example.demo.model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,10 +12,10 @@ import java.util.List;
 @RequestMapping(path = "api/v1/student")
 public class StudentController {
 
-    private final StudentService studentService;
+    private final IStudentService studentService;
 
     @Autowired
-    public StudentController(StudentService studentService) {
+    public StudentController(IStudentService studentService) {
         this.studentService = studentService;
     }
 
